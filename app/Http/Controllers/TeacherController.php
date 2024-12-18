@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use App\Models\Teacher;
+use App\Models\teacher;
+use Illuminate\Http\Responce;
 use Illuminate\Http\RedirectResponse;
 
 
@@ -15,7 +16,7 @@ class TeacherController extends Controller
      */
     public function index(): view
     {
-        $teachers = Teacher::all();
+        $teachers = teacher::all();
         return view('teachers.index')->with('teachers',$teachers);
     }
 
@@ -33,8 +34,8 @@ class TeacherController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $input = $request->all();
-        Teacher::create($input);
-        return redirect('teachers')->with('flash_message','Teacher Added');
+        teacher::create($input);
+        return redirect('teachers')->with('flash_message','teacher Added');
     }
 
     /**
@@ -42,7 +43,7 @@ class TeacherController extends Controller
      */
     public function show(string $id): view
     {
-        $teacher = Teacher::find($id);
+        $teacher = teacher::find($id);
         return view('teachers.show', compact('teacher'));
     }
 
@@ -51,7 +52,7 @@ class TeacherController extends Controller
      */
     public function edit(string $id): view
     {
-        $teacher = Teacher::find($id);
+        $teacher = teacher::find($id);
         return view('teachers.edit', compact('teacher'));
     }
 
@@ -60,7 +61,7 @@ class TeacherController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
     {
-        $teacher = Teacher::find($id);
+        $teacher = teacher::find($id);
         $input = $request->all();
         $teacher->update($input);
         return view('teachers.update', compact('teacher'));
@@ -71,7 +72,7 @@ class TeacherController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
-        Teacher::destroy($id);
-        return redirect('teachers')->with('flash_message','Teacher Deleted');
+        teacher::destroy($id);
+        return redirect('teachers')->with('flash_message','teacher Deleted');
     }
 }
