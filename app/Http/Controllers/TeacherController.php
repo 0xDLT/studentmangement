@@ -4,75 +4,72 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use App\Models\teacher;
-use Illuminate\Http\Responce;
-use Illuminate\Http\RedirectResponse;
-
+use App\Models\Teacher;
 
 class TeacherController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): view
+    public function index()
     {
-        $teachers = teacher::all();
-        return view('teachers.index')->with('teachers',$teachers);
+        $teachers = Teacher::all();
+        return view('teachers.index')->with('teachers', $teachers);
     }
 
-    /** 
+    /**
      * Show the form for creating a new resource.
      */
-    public function create(): view
+    public function create()
     {
         return view('teachers.create');
-    }
+    }   
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         $input = $request->all();
-        teacher::create($input);
-        return redirect('teachers')->with('flash_message','teacher Added');
+        Teacher::create($input);
+        return redirect('teachers')->with('flash_message','Teacher Added!');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id): view
+    public function show(string $id)
     {
-        $teacher = teacher::find($id);
+        $teacher = Teacher::find($id);
         return view('teachers.show', compact('teacher'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id): view
+    public function edit(string $id)
     {
-        $teacher = teacher::find($id);
+        $teacher = Teacher::find($id);
         return view('teachers.edit', compact('teacher'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id): RedirectResponse
-    {
-        $teacher = teacher::find($id);
+    public function update(Request $request, string $id)
+    {   
+        $teacher = Teacher::find($id); 
         $input = $request->all();
         $teacher->update($input);
-        return view('teachers.update', compact('teacher'));
+        return redirect('teachers')->with('flash_message','Teacher Updated!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id): RedirectResponse
+    public function destroy(string $id)
     {
-        teacher::destroy($id);
-        return redirect('teachers')->with('flash_message','teacher Deleted');
+        Teacher::destroy($id);
+        return redirect('teachers')->with('flash_message','Teacher Added!');
     }
 }
