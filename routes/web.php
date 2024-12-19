@@ -14,4 +14,3 @@ Route::resource('/students',StudentController::class);
 Route::resource('/teachers',TeacherController::class);
 
 Route::resource('/courses', CourseController::class);
-Route::put('/courses/{id}', [CourseController::class, 'update'])->name('courses.update');

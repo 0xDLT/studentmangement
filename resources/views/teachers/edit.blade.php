@@ -61,10 +61,10 @@
 
             <!-- Submit Button -->
             <div class="flex items-center justify-between">
-            <a href="{{ route('teachers.index') }}" 
-            class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                Save Changes
-            </a>
+            <button type="submit" 
+                class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Save Changes
+            </button>
 
                 <a href="{{ route('teachers.index') }}" class="text-blue-500 hover:text-blue-700">
                     Back to List

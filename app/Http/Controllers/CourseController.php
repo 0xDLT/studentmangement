@@ -58,10 +58,10 @@ class CourseController extends Controller
      */
     public function update(Request $request, string $id)
     {   
-        $course = Course::findOrFail($id);
+        $course = Course::find($id); 
         $input = $request->all();
         $course->update($input);
-        return view('courses.update', compact('course'));
+        return redirect('courses')->with('flash_message','Course Updated!');
     }
 
     /**
