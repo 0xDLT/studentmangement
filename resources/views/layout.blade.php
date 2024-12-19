@@ -42,7 +42,8 @@
         <a class="block py-2 px-4 rounded bg-gray-700 mb-2 text-white hover:bg-gray-600" href="{{ url('/students') }}">Students</a>
         <a class="block py-2 px-4 rounded bg-gray-700 mb-2 text-white hover:bg-gray-600" href="{{ url('/teachers') }}">Teacher</a>
         <a class="block py-2 px-4 rounded bg-gray-700 mb-2 text-white hover:bg-gray-600" href="{{ url('/courses') }}">Courses</a>
-        <a class="block py-2 px-4 rounded bg-gray-700 mb-2 text-white hover:bg-gray-600" href="#about">Enrollment</a>
+        <a class="block py-2 px-4 rounded bg-gray-700 mb-2 text-white hover:bg-gray-600" href="{{ url('/batches') }}">Batches</a>
+        <a class="block py-2 px-4 rounded bg-gray-700 mb-2 text-white hover:bg-gray-600" href="{{ url('enrollments') }}">Enrollment</a>
         <a class="block py-2 px-4 rounded bg-gray-700 mb-2 text-white hover:bg-gray-600" href="#about">Payment</a>
     </div>
     <div class="content">
