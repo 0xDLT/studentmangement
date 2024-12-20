@@ -13,8 +13,13 @@
             </div>
 
             <div class="mb-4">
-                <label for="course_id" class="block text-sm font-semibold text-gray-700">Course Name</label>
-                <input type="text" id="course_id" name="course_id" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            <label for="course_id" class="block text-sm font-semibold text-gray-700">Course Name</label>
+            <select name="course_id" id="course_id" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-6" required>
+            <option value="">Select Course</option>
+            @foreach($course as $id => $name)
+                <option value="{{ $id }}">{{ $name }}</option>
+            @endforeach
+            </select>
             </div>
 
             <div class="mb-4">

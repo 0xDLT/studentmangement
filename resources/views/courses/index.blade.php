@@ -19,22 +19,22 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($courses as $course)
+                @foreach($course as $item)
                     <tr class="border-t">
-                        <td class="py-2 px-4 text-gray-700">{{$course->id}}</td>
-                        <td class="py-2 px-4 text-gray-700">{{$course->name}}</td>
-                        <td class="py-2 px-4 text-gray-700">{{$course->syllabus}}</td>
-                        <td class="py-2 px-4 text-gray-700">{{$course->duration}}</td>
+                        <td class="py-2 px-4 text-gray-700">{{$item->id}}</td>
+                        <td class="py-2 px-4 text-gray-700">{{$item->name}}</td>
+                        <td class="py-2 px-4 text-gray-700">{{$item->syllabus}}</td>
+                        <td class="py-2 px-4 text-gray-700">{{$item->duration()}}</td>
                         <td class="py-2 px-4">
-                            <a href="{{ route('courses.show', $course->id) }}" class="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <a href="{{ route('courses.show', $item->id) }}" class="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 View
                             </a>
 
-                            <a href="{{ route('courses.edit', $course->id) }}" class="bg-green-500 text-white px-4 py-1 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <a href="{{ route('courses.edit', $item->id) }}" class="bg-green-500 text-white px-4 py-1 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
                                 Edit
                             </a>
 
-                            <form action="{{ route('courses.destroy', $course->id) }}" method="POST" class="inline-block">
+                            <form action="{{ route('courses.destroy', $item->id) }}" method="POST" class="inline-block">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="bg-red-500 text-white px-4 py-1 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">

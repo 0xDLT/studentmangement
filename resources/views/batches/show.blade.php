@@ -17,13 +17,9 @@
                         <p class="text-lg text-gray-600">{{ $batch->name }}</p>
                     </div>
 
-                    <!-- <div>
-                        <h2 class="text-xl font-medium text-gray-700">Course</h2>
-                        <p class="text-lg text-gray-600">{{ $batch->course_id }}</p>
-                    <div> -->
                     <div>
                         <h2 class="text-xl font-medium text-gray-700">Course Name:</h2>
-                        <p class="text-lg text-gray-600">{{ $batch->course_id}}</p>
+                        <p class="text-lg text-gray-600">{{ $batch->course->name}}</p>
                     </div>
                     </div>
 
@@ -34,16 +30,16 @@
                 @else
                     <p class="text-lg text-red-600">batch not found.</p>
                 @endif
-            </div>
 
-            <div class="mt-6">
-                <a href="/batches" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <div class="mt-6">
+                <a href="/batches" class="bg-blue-500 text-white px-6 py-2 rounded-md mt-6 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     Back to List
                 </a>
+                </div>
             </div>
 
-        </div>
     </div>
+
 
 </body>
 

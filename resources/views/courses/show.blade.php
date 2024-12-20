@@ -24,7 +24,7 @@
 
                     <div>
                         <h2 class="text-xl font-medium text-gray-700">Mobile:</h2>
-                        <p class="text-lg text-gray-600">{{ $course->duration }}</p>
+                        <p class="text-lg text-gray-600">{{ $course->duration() }}</p>
                     </div>
                 @else
                     <p class="text-lg text-red-600">course not found.</p>

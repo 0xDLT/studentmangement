@@ -16,7 +16,7 @@
                 <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
                 <input 
                     type="text" 
-                    id="name" 
+                    id="name"
                     name="name" 
                     value="{{ old('name', $course->name) }}" 
                     class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 

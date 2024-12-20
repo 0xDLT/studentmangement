@@ -7,7 +7,7 @@
         <h1 class="text-3xl font-semibold text-gray-800 mb-6">Edit Batches</h1>
 
         <!-- Edit batches Form -->
-        <form action="{{ route('batches.update', $batche->id) }}" method="POST">
+        <form action="{{ route('batches.update', $batch->id) }}" method="POST">
             @csrf
             @method('PUT')
 
@@ -18,7 +18,7 @@
                     type="text" 
                     id="name" 
                     name="name" 
-                    value="{{ old('name', $batche->name) }}" 
+                    value="{{ old('name', $batch->name) }}" 
                     class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                     required
                 >
@@ -34,7 +34,7 @@
                     type="text" 
                     id="course_id" 
                     name="course_id" 
-                    value="{{ old('course_id', $batche->course_id) }}" 
+                    value="{{ old('course->name', $batch->course->name) }}" 
                     class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                     required
                 >
@@ -50,7 +50,7 @@
                     type="text" 
                     id="start_date" 
                     name="start_date" 
-                    value="{{ old('start_date', $batche->start_date) }}" 
+                    value="{{ old('start_date', $batch->start_date) }}" 
                     class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
                     required
                 >

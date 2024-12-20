@@ -25,8 +25,8 @@
                     <tr class="border-t">
                         <td class="py-2 px-4 text-gray-700">{{$enrollment->id}}</td>
                         <td class="py-2 px-4 text-gray-700">{{$enrollment->enroll_no}}</td>
-                        <td class="py-2 px-4 text-gray-700">{{$enrollment->batch_id}}</td>
-                        <td class="py-2 px-4 text-gray-700">{{$enrollment->student_id}}</td>
+                        <td class="py-2 px-4 text-gray-700">{{$enrollment->batch->name}}</td>
+                        <td class="py-2 px-4 text-gray-700">{{$enrollment->student->name}}</td>
                         <td class="py-2 px-4 text-gray-700">{{$enrollment->join_date}}</td>
                         <td class="py-2 px-4 text-gray-700">{{$enrollment->fee}}</td>
                         <td class="py-2 px-4">

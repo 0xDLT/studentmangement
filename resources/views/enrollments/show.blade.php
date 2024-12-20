@@ -19,12 +19,12 @@
 
                     <div>
                         <h2 class="text-xl font-medium text-gray-700">Batch:</h2>
-                        <p class="text-lg text-gray-600">{{ $enrollment->batch_id }}</p>
+                        <p class="text-lg text-gray-600">{{ $enrollment->batch->name }}</p>
                     </div>
 
                     <div>
                         <h2 class="text-xl font-medium text-gray-700">Student:</h2>
-                        <p class="text-lg text-gray-600">{{ $enrollment->student_id }}</p>
+                        <p class="text-lg text-gray-600">{{ $enrollment->student->name }}</p>
                     </div>
 
                     <div>

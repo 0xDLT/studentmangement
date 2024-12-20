@@ -23,7 +23,7 @@
                     <tr class="border-t">
                         <td class="py-2 px-4 text-gray-700">{{$batch->id}}</td>
                         <td class="py-2 px-4 text-gray-700">{{$batch->name}}</td>
-                        <td class="py-2 px-4 text-gray-700">{{$batch->course_id}}</td>
+                        <td class="py-2 px-4 text-gray-700">{{$batch->course->name}}</td>
                         <td class="py-2 px-4 text-gray-700">{{$batch->start_date}}</td>
                         <td class="py-2 px-4">
                             <a href="{{ route('batches.show', $batch->id) }}" class="bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
